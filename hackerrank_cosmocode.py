@@ -1,22 +1,19 @@
 #https://www.hackerrank.com/contests/cosmocode-2-0/challenges/superpower-mania
-
-no_of_days = int(input())
-cost = input()
-costlist = cost.split()
-no_of_players = int(input())
-player_cost = []
-for i in range(0, no_of_players):
-	player_cost = player_cost + [int(input())]
-for i in player_cost:
-	for j in range(len(costlist)-1, -1, -1):
-		if i >= int(costlist[j]) :
-			count = 0
-			count = j+1
-			break
-		else:
-			pass
-	try :		
-		print(int(count))
-		count = 's'	
-	except :
-		print('-1')	
+import sys
+a = []
+a.append(sys.stdin.readlines())
+# print(a)
+a = a[0]
+days = int(a[0])
+prices = a[1]
+prices = [int(i) for i in prices.split()]
+rev_prices = list(reversed(prices))
+cases = int(a[2])
+tests = [int(i) for i in a[3:]]
+days=len(prices)
+for i in tests:
+    try:
+        print(days - rev_prices.index(i))
+    except:
+        print(-1)
+	
