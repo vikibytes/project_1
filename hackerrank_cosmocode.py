@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/contests/cosmocode-2-0/challenges/albert-desmonds-evil-lab
+#https://www.hackerrank.com/contests/cosmocode-2-0/challenges/superpower-mania
 
 no_of_days = int(input())
 cost = input()
